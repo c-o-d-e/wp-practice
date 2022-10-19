@@ -1,5 +1,14 @@
 <?php
 
+function practicetheme_theme_support(){
+    // Adds dynamic title tag support
+    add_theme_support('title-tag');
+
+}
+
+add_action('after_setup_theme', 'practicetheme_theme_support');
+
+
 function practicetheme_register_styles(){
     $version = wp_get_theme()->get( 'Version' );
 
@@ -13,7 +22,7 @@ add_action('wp_enqueue_scripts', 'practicetheme_register_styles');
 
 
 function practicetheme_register_scripts(){
-    
+
   wp_enqueue_script('practicetheme-jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), "3.4.1", true);
   wp_enqueue_script('practicetheme-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), "1.16.0", true);
   wp_enqueue_script('practicetheme-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array(), "4.4.1", true);
