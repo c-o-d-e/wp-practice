@@ -9,6 +9,19 @@ function practicetheme_theme_support(){
 add_action('after_setup_theme', 'practicetheme_theme_support');
 
 
+function practicetheme_menus(){
+
+    $locations = array(
+        'primary' => "Desktop Primary Left Sidebar",
+        'footer' => "Footer Menu Items"
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init', 'practicetheme_menus');
+
+
 function practicetheme_register_styles(){
     $version = wp_get_theme()->get( 'Version' );
 
