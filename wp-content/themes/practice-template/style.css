@@ -294,7 +294,7 @@ h6 {
     background: var(--secondary);
 }
 
-.blog-nav a-prev {
+.blog-nav .nav-link-prev {
     border-right: 1px solid var(--secondary);
 }
 
