@@ -3,6 +3,7 @@
 function practicetheme_theme_support(){
     // Adds dynamic title tag support
     add_theme_support('title-tag');
+    add_theme_support('custom-logo');
 
 }
 
